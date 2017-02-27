@@ -1,6 +1,6 @@
 /*
  *  Catch v1.7.2
- *  Generated: 2017-02-27 18:06:06.336378
+ *  Generated: 2017-02-27 18:33:16.634544
  *  ----------------------------------------------------------
  *  This file has been merged from multiple headers. Please don't edit it directly
  *  Copyright (c) 2012 Two Blue Cubes Ltd. All rights reserved.
@@ -2212,7 +2212,7 @@ namespace Catch {
                 static_cast<void>(expr); \
                 __catchResult.captureResult( Catch::ResultWas::DidntThrowException ); \
             } \
-            catch( Catch::add_const<Catch::add_lvalue_reference<exceptionType>::type>::type ) { \
+            catch( typename Catch::add_const<typename Catch::add_lvalue_reference<exceptionType>::type>::type ) { \
                 __catchResult.captureResult( Catch::ResultWas::Ok ); \
             } \
             catch( ... ) { \
